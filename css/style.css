@@ -260,6 +260,7 @@ nav{
 	font-size: 4vh;
 	display: flex;
 	flex-direction: column;
+	animation: transitionIn 1.25s;
 }
 .container img{
 	width:10vh;
@@ -269,6 +270,17 @@ nav{
 	.container img{
 		margin-top: 20vh;
 		margin-bottom: 30vh;
+	}
+}
+
+@keyframes transitionIn{
+	from{
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	to{
+		opacity: 1;
+		transform: rotateX(0);
 	}
 }
 
@@ -282,6 +294,7 @@ nav{
 	z-index: 0;
 	margin-left: auto;
 	margin-right: auto;
+	display: block;
 }
 
 .video-container::after {
@@ -342,42 +355,26 @@ nav{
 }
 @media screen and (max-width:1200px){
 	#link1{
-		display: none;
+		opacity: 1;
+		
 	}
 	#link2{
-		display: none;
+		opacity: 0;
 	}
 	#link3{
-		display: none;
+		opacity: 0;
 	}
 	#link4{
-		display: none;
+		opacity: 0;
 	}
 	#link5{
-		display: none;
+		opacity: 0;
 	}
 	#link6{
-		display: none;
+		opacity: 0;
 	}
-}
-@media screen and (min-height:1230px){
-	#link1{
-		display: none;
-	}
-	#link2{
-		display: none;
-	}
-	#link3{
-		display: none;
-	}
-	#link4{
-		display: none;
-	}
-	#link5{
-		display: none;
-	}
-	#link6{
-		display: none;
+	#link1 a{
+		pointer-events: none;
 	}
 }
 .czym-sie-zajmuje{
@@ -450,10 +447,12 @@ nav{
 @media screen and (max-width:1200px){
 	.papier h1{
 		font-size: 6vh;
+		
 	}
 	.papier p{
 		font-size: 4vh;
 	}
+	
 }
 
 /*FOOTER*/
@@ -498,6 +497,9 @@ nav{
 	box-sizing: border-box;
 	margin: 20px 15px;
 }
+.subskrybcje:hover{
+	background-color: #CDA776;
+}
 .opis{
 	font-size: 3.5vh;
 	max-width: 100%;
@@ -505,10 +507,10 @@ nav{
 	padding: 1vh;
 }
 .details{
-	display: flex;
 	flex-direction: column;
-	align-items: center;
+	text-align: center;
 	width: 200px;
+	width: 100%;
 }
 .details p{
 	font-weight: bold;
@@ -516,6 +518,7 @@ nav{
 	font-size: 5vh;
 	margin-top: 20px;
 	padding-bottom: 2vh;
+	width: 100%;
 }
 .sub{
 	color: #6d593e;
@@ -523,9 +526,10 @@ nav{
 	letter-spacing: 2px;
 	font-size: 5vh;
 	padding-top: 2vh;
+	text-align: center;
 }
 
-/*TODO Carousel*/
+/*! Carousel*/
 
 .books{
 	width: 100%;
@@ -536,7 +540,7 @@ nav{
 .book{
 	width: 350px;
 	height: 300px;
-	background-color:cornsilk;
+	background-color: #fff8dc;
 	border-radius: 15px;
 	box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
 	display: flex;
@@ -546,9 +550,13 @@ nav{
 	box-sizing: border-box;
 	margin: 20px 15px;
 }
+.book:hover{
+	background-color: #ddd6ba;
+}
 #offer{
 	text-align: center;
 	font-size: 9vh;
+	margin-top: 3vh;
 }
 
 .shop{
@@ -560,6 +568,111 @@ nav{
 	color: black;
 }
 .shop h1{
+	border-radius: 15px;
+	box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.5);
+	padding-left: 2vh;
+}
+
+/*! SUB 1 */
+
+.buy{
+	display: flex;
+	flex-direction: row;
+}
+.sub1{
+	height: 70vh;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:space-around;
+	align-content: space-around;
+	margin: 3vh;
+	padding: 3vh;
+	border-radius: 5vh;
+	border: 3px solid black;
+	background-color: rgb(252, 214, 150);
+}
+.cash{
+	height: 70vh;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:space-around;
+	align-content: space-around;
+	margin: 3vh;
+	padding: 3vh;
+	border-radius: 5vh;
+	border: 3px solid black;
+	background-color: rgb(252, 214, 150);
+}
+
+.opakowanie{
+	display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.opakowanie input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	border-radius: 0.5vh;
+	background-color: #eee;
+}
+.opakowanie:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+.opakowanie input:checked ~ .checkmark {
+	background-color:#6d593e;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.opakowanie input:checked ~ .checkmark:after {
+	display: block;
+}
+.opakowanie .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+
+  
+  .book{
+	position: relative;
+  }
+  .book img{
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	width: 30%;
+  }
+  .ksiazki-do-wyb h1{
 	border-radius: 15px;
 	box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.5);
 	padding-left: 2vh;

@@ -1,10 +1,10 @@
 // JavaScript Document
-$(document).ready(function() {
-    $('#autoWi').lightSlider({
+ $(document).ready(function() {
+    $('#autoWidth').lightSlider({
         autoWidth:true,
         loop:true,
         onSliderLoad: function() {
-            $('#autoWi').removeClass('cS-hid');
+            $('#autoWidth').removeClass('cS-hidden');
         } 
     });  
   });
