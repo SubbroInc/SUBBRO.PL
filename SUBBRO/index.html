@@ -1,0 +1,155 @@
+<!------CREDITS-------->
+<!--Font by Vernon Adams, Ben Nathan, Thomas Jockin, Cyreal- Google Fonts--> <!--Licence: SIL (OFL)-->
+<!--Icons by Crowdsourced, Dave Gandy, Daniel Bruce, Stephep Hutchings, Aristeides Stathopoulus- Fontello--> <!--Licence: SIL (OFL)-->
+<!--Slide menu inspiration by Dev Ed-->
+<!--SlideTo by flesler GitHub--> <!--Licence: MIT-->
+<!--Ilustrations by unDraw--> <!--Licence: Free to use-->
+
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <!---SITE SETTINGS-->
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!--SITE DESCRIPTION ETC.-->
+        <meta name="author" content="Subbro"/>
+        <meta name="keywords" content="książka, książki, subskrybcja, abonament, seria, serie, wydawnictwo, zamów"/>
+        <meta name="description" content="Sklep, w którym możesz zakupić abonament książkowy">
+        <title>SUBBRO</title>
+        <!--SITE LINKS (CSS, FONTS ETC.)-->
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="fontello/css/fontello.css">
+
+        <!--SCRIPTS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            jQuery(function($){
+                //reset scroll
+                $.scrollTo(0);
+                $('#link1').click(function() { $.scrollTo($('.czym-sie-zajmuje'), 500); });
+                $('.scrollup').click(function() { $.scrollTo($('body'), 500); });
+                $('#link3').click(function() { $.scrollTo($('.eko-subbro'), 500); });
+                $('#link5').click(function() { $.scrollTo($('.footer'), 700); });
+                $('#link6').click(function() { $.scrollTo($('body'), 500); });
+            }); 
+
+            //show when scrolling
+            $(window).scroll(function(){
+                if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+                else $('.scrollup').fadeOut();
+            });
+        </script>
+
+    <script>
+            window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+            }
+        </script>
+
+    <script>
+        $('.intro').click(function(){
+
+            disable_scroll();
+
+            $('html, body').stop().animate({ scrollTop: 0 }, 700,function() {
+            enable_scroll();
+            });
+        });
+        </script>
+
+    <script src="js/jquery.scrollTo.js"></script>
+        </script>
+    </head>
+    <body><main>
+    <!--SCROLL UP-->
+<a href="#" class="scrollup"><img src="img/arrow-up.svg"></a>
+<!--TOP FOOTER-->
+        <aside>
+            <div class="top-footer">
+                <a href="#"><img src="img/icon-user.png" id="user-icon" alt="Przewiń na górę strony">Zaloguj się</a>
+            </div>
+        </aside>
+<!----SITE LOGO---->
+        <nav>
+            <div class="logo">
+                <a href="index.html">SUBBRO</a>
+            </div>
+<!-------MENU------->
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">Strona główna</a>
+                    </li>
+                    <li>
+                        <a href="#">Co to SUBBRO?</a>
+                    </li>
+                    <li>
+                        <a href="oferta.html">Oferta</a>
+                    </li>
+                    <li>
+                        <a href="#">Konto</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav> 
+<!--MAIN CONTENT--> 
+        <div class="container"><article>
+            <div class="ramka"><div class="video-container">
+                <iframe src="https://www.youtube.com/embed/unU9vpLjHRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div></div>
+            <a href="#" id="link1"><img src="img/arrow.svg" alt="Przewiń w dół"></a>
+            <div class="czym-sie-zajmuje">
+            <h1 id="czym-zajmuje-sie-subbro">Czym zajmuje się Subbro?</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat temporibus, accusantium incidunt enim quaerat, recusandae in velit quas vel doloremque nisi, autem ducimus. Distinctio deleniti, harum aspernatur praesentium hic iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi, cupiditate recusandae ullam atque modi aliquam nesciunt, est laudantium fugiat quasi quibusdam rerum, maxime aperiam iste accusantium repellat nobis dolore! Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+             <a href="#" id="link3"><img src="img/arrow.svg" alt="Przewiń w dół"></a> 
+            <div class="eko-subbro">
+            <h1 id="ekologia-subbro">Chroń planetę z Subbro!</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat temporibus, accusantium incidunt enim quaerat, recusandae in velit quas vel doloremque nisi, autem ducimus. Distinctio deleniti, harum aspernatur praesentium hic iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi, cupiditate recusandae ullam atque modi aliquam nesciunt, est laudantium fugiat quasi quibusdam rerum, maxime aperiam iste accusantium repellat nobis dolore! Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div> 
+            <a href="#" id="link5"><img src="img/arrow.svg" alt="Przewiń w dół"></a> 
+            <div class="papier">
+            <h1 id="nasz-papier">Papier Antalis &copy; Ecco Book przyjazny środowisku</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat temporibus, accusantium incidunt enim quaerat, recusandae in velit quas vel doloremque nisi, autem ducimus. Distinctio deleniti, harum aspernatur praesentium hic iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi, cupiditate recusandae ullam atque modi aliquam nesciunt, est laudantium fugiat quasi quibusdam rerum, maxime aperiam iste accusantium repellat nobis dolore! Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>     <a href="#" id="link6"><img src="img/arrow.svg" alt="Przewiń na górę"></a>
+        </article></div>
+<!--BOTTOM FOOTER-->   
+        <div class="footer"><aside>
+            SUBBRO 2021 &copy; Wszystkie prawa zastrzeżone
+        </aside></div>
+    </main>
+<!--INTRO-->
+    <div class="intro">
+        <h1 class="hide-left">
+            <span class="text">SUBBRO</span>
+        </h1>
+        <div class="intro-text">
+        <h1 class="hide">
+            <span class="text">Nie martw się</span>
+        </h1>
+        <h1 class="hide">
+            <span class="text">kupnem książek,</span>
+        </h1>
+        <h1 class="hide">
+            <span class="text">my się tym zajmiemy.</span>
+        </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+<!--SCRIPTS-->
+        <script src="js/slide-menu.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous">
+    </script>
+        <script src="js/intro.js"></script>
+    </body>
+</html>
