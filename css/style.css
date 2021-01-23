@@ -3,6 +3,7 @@
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: 'Amatic SC', cursive;
+	overflow-x: hidden;
 }
 ul{
 	list-style:none;
@@ -20,6 +21,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: auto;
 	min-height: 100vh;
+	position: relative
 }
 
 /* !INDEX.HTML */
